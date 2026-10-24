@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avis, Suggestions & Améliorations — NATINF Explorer</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f9fafb;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 36px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid #e5e7eb;
+    }
+    .nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .nav a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #6b7280;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav a.active {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+    .nav a:hover:not(.active) {
+      background: #f3f4f6;
+      color: #111827;
+    }
+    h1 { color: #111827; margin-top: 0; font-size: 1.75rem; }
+    p.subtitle { color: #4b5563; font-size: 1rem; margin-top: -4px; margin-bottom: 28px; }
+    .badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #065f46;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+    label span.optional {
+      font-weight: normal;
+      color: #6b7280;
+      font-size: 0.85rem;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: #111827;
+      background: #ffffff;
+      box-sizing: border-box;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #0284c7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .btn {
+      display: inline-block;
+      background: #0284c7;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.05s;
+      width: 100%;
+    }
+    .btn:hover {
+      background: #0369a1;
+    }
+    .btn:active {
+      transform: scale(0.99);
+    }
+    .info-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .footer {
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="nav">
+      <a href="index.html">🛡️ Règles de confidentialité</a>
+      <a href="feedback.html" class="active">💬 Donner un avis / Suggestion</a>
+    </div>
+
+    <span class="badge">Espace utilisateurs & terrain</span>
+    <h1>Vos retours & suggestions</h1>
+    <p class="subtitle">Votre avis et vos retours d'expérience sont précieux pour faire évoluer <strong>NATINF Explorer</strong>.</p>
+
+    <form action="https://formsubmit.co/boitepostalethsy@laposte.net" method="POST">
+      <!-- Options FormSubmit -->
+      <input type="hidden" name="_subject" value="[NATINF Explorer] Nouveau retour utilisateur">
+      <input type="hidden" name="_next" value="https://oligaming.github.io/natinf-privacy-policy/merci.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="form-group">
+        <label for="type">Objet de votre retour *</label>
+        <select id="type" name="Type_de_retour" required>
+          <option value="Suggestion d'amélioration">💡 Suggestion d'amélioration</option>
+          <option value="Demande de nouveau pack d'infractions">📦 Demande de nouveau pack d'infractions</option>
+          <option value="Signalement d'erreur ou d'omission">⚠️ Signalement d'une erreur / coquille</option>
+          <option value="Avis général / Encouragement">⭐ Avis général / Retour d'expérience</option>
+          <option value="Autre demande">✉️ Autre demande</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="titre">Titre ou résumé court *</label>
+        <input type="text" id="titre" name="Titre" placeholder="Ex. : Ajouter un pack pour les infractions liées à la chasse..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Votre message ou suggestion détaillée *</label>
+        <textarea id="message" name="Message" placeholder="Détaillez votre proposition, l'infraction concernée, ou le besoin rencontré sur le terrain..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Votre adresse e-mail <span class="optional">(facultatif, pour recevoir une réponse)</span></label>
+        <input type="email" id="email" name="Email_utilisateur" placeholder="nom.prenom@exemple.fr">
+      </div>
+
+      <button type="submit" class="btn">✉️ Envoyer mon retour</button>
+    </form>
+
+    <div class="info-box">
+      🔒 <strong>Respect de votre vie privée :</strong> Les messages envoyés via ce formulaire sont transmis directement et confidentiellement à l'équipe de développement. Aucune donnée n'est revendue ou cédée à des tiers.
+    </div>
+
+    <div class="footer">
+      NATINF Explorer · Application d'aide à la qualification pénale
+    </div>
+  </div>
+</body>
+</html>
