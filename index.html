@@ -16,10 +16,34 @@
     }
     .card {
       background: #ffffff;
-      border-radius: 12px;
-      padding: 32px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-radius: 14px;
+      padding: 36px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
       border: 1px solid #e5e7eb;
+    }
+    .nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .nav a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #6b7280;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav a.active {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+    .nav a:hover:not(.active) {
+      background: #f3f4f6;
+      color: #111827;
     }
     h1 { color: #111827; margin-top: 0; font-size: 1.75rem; }
     h2 { color: #1f2937; margin-top: 24px; font-size: 1.25rem; border-bottom: 1px solid #f3f4f6; padding-bottom: 8px; }
@@ -41,11 +65,17 @@
       color: #6b7280;
       border-top: 1px solid #e5e7eb;
       padding-top: 16px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="card">
+    <div class="nav">
+      <a href="index.html" class="active">🛡️ Règles de confidentialité</a>
+      <a href="feedback.html">💬 Donner un avis / Suggestion</a>
+    </div>
+
     <span class="badge">Protection de la vie privée garantie</span>
     <h1>Politique de Confidentialité — NATINF Explorer</h1>
     <p>Dernière mise à jour : 24 octobre 2026</p>
@@ -76,8 +106,8 @@
     <h2>5. Nature indépendante de l'application</h2>
     <p>L'application <em>NATINF Explorer</em> est un outil technique indépendant d'aide à la consultation de la nomenclature juridique officielle. Elle n'est pas éditée par un ministère et ne représente pas officiellement une entité gouvernementale.</p>
 
-    <h2>6. Contact</h2>
-    <p>Pour toute question relative à cette politique de confidentialité, vous pouvez contacter le développeur à l'adresse suivante : <code>contact.gendhub@gmail.com</code> (ou votre adresse de contact développeur).</p>
+    <h2>6. Contact & Retours</h2>
+    <p>Pour toute question ou suggestion, vous pouvez contacter le développeur directement à : <code>boitepostalethsy@laposte.net</code> ou utiliser notre <a href="feedback.html">formulaire d'avis et de suggestions</a>.</p>
 
     <div class="footer">
       NATINF Explorer — Application locale d'aide à la qualification pénale.
